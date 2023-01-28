@@ -1,0 +1,10 @@
+UART.cpp: In function ‘int main()’:
+UART.cpp:176:18: error: invalid conversion from ‘char*’ to ‘unsigned char’ [-fpermissive]
+   serial.receive(data, length);
+                  ^~~~
+UART.cpp:149:30: note:   initializing argument 1 of ‘void SerialDevice::receive(unsigned char&, int)’
+  void receive(unsigned char &data, int length) {
+               ~~~~~~~~~~~~~~~^~~~
+UART.cpp:176:18: error: cannot bind rvalue ‘(unsigned char)((char*)(& data))’ to ‘unsigned char&’
+   serial.receive(data, length);
+                  ^~~~

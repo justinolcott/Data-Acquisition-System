@@ -1,0 +1,29 @@
+import board
+import shutil
+import numpy as np
+import time
+import busio
+from adafruit_extended_bus import ExtendedI2C as I2C 
+import adafruit_ads1x15.ads1115 as ADS
+from adafruit_ads1x15.ads1x15 import Mode
+from adafruit_ads1x15.analog_in import AnalogIn
+import socket
+import pickle
+
+RATE = 860
+SAMPLES = 1000
+
+i2c = I2C(4, 1000000)
+ads = ADS.ADS1115(i2c)
+chan0 = AnalogIn(ads, ADS.P0, ADS.P1)
+ads.mode = Mode.CONTINUOUS
+ads.data_rate = RATE
+ads.gain = 16
+data = np.zeros((1, 2))
+start = time.monotonic()
+for i in range(SAMPLES):
+  data = np.append(data, np.array([[time.monotonic() - start, chan0.voltage]]), axis=0)
+end = time.monotonic()
+print(end - start)
+print(data)
+np.savet
