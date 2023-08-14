@@ -7,7 +7,7 @@
 - Rev F features the most recent implementation of the Data Acquisition system that features an Analog-to-Digital sensor using ADS1115 and other sensors such as pressure, temperature, GPS, accelerometer, and more which will be used for flight testing.
 - It is NOT out-of-the-box and required some serious tinkering to work, but it was eventually used as a piggyback to a much larger, expensive DAQ for testing a Blackhawk Helicopter. The sensors were wired using a breadboard and connected to a Raspberry Pi 4.
 
-## Work in Progress
+## In Progress
 - The current work in progress is much simpler and is just a PCB hat for a Raspberry Pi Zero W. The PCB features an ADS1115, an adjustable quarter-Wheatstone bridge. It then outputs serial data to be read by a PC.
 
 ## Future
