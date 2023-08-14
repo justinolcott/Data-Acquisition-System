@@ -12,19 +12,19 @@
 
 ## Future
 1. PCB for Raspberry Pi Zero that features:
-  - high and low pass filters
-  - ADS1120 for SPI and faster sampling
-  - an integrated serial output via USB
+    - high and low pass filters
+    - ADS1120 for SPI and faster sampling
+    - an integrated serial output via USB
 2. PCB for ESP32 with the same features.
 3. Adding more channels.
 4. Adding different types of sensors:
-  - GPS
-  - Accelerometer
-  - Absolute Pressure
-  - Relative Pressure
-  - Temperature
+    - GPS
+    - Accelerometer
+    - Absolute Pressure
+    - Relative Pressure
+    - Temperature
 5. Interconnectivity between different controllers
-  - Allows for multiple DAQs to be integrated to create a single large DAQ. The main issues will be managing time synchronization and data bandwidth.
+    - Allows for multiple DAQs to be integrated to create a single large DAQ. The main issues will be managing time synchronization and data bandwidth.
 6. Multiple Output types such as WebSockets to allow wireless streaming.
 
 The vision is an affordable, yet high-quality DAQ with easy setup and usability that can be used for flight testing and a variety of other testing environments.
